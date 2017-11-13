@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+<body>
+    <section>
+       <article>
+          <div id="rotate">
+          </div>
+          <div></div>
+       </article>
+    </section>
+    
+    <script>
+    /*function rotate() {
+        document.getElementById("rotate").className="rotate";
+    }*/
+    var blockNode = document.querySelector('#rotate');
+        blockNode.addEventListener('click', function(e){
+            console.log("clicked");
+            this.classList.add("rotate");
+            e.stopPropagation();
+        })
+    </script>
+</body>
+</html>
