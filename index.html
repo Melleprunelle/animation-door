@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Book</title>
@@ -7,28 +8,45 @@
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 </head>
+
 <body>
     <section>
-       <article>
-          <div id="rotate">
-              <div class="poigne"></div>
-          </div>
-          <div></div>
-       </article>
-       <h1>Effect Open the Door <span>_</span></h1>
+        <article>
+            <div id="rotate">
+                <div class="poigne"></div>
+            </div>
+            <div></div>
+        </article>
+        <div>
+            <h1 id="text"></h1>
+            <span> _</span>
+        </div>
     </section>
-    
+
     <script>
-  
-    var blockNode = document.querySelector('#rotate');
-        blockNode.addEventListener('click', function(){
+        var blockNode = document.querySelector('#rotate');
+        blockNode.addEventListener('click', function() {
             console.log("clicked");
             this.classList.add("rotate");
         })
-        blockNode.addEventListener('dblclick', function(){
+        blockNode.addEventListener('dblclick', function() {
             console.log("dblclicked");
             this.classList.remove("rotate");
         })
+
+
+        var myText = 'Open the door and Close the Door',
+            i = 0;
+        window.onload = function() {
+            var typeWriter = setInterval(function() {
+                document.getElementById('text').textContent += myText[i];
+                i++;
+                if (i > myText.length - 1) {
+                    clearInterval(typeWriter);
+                }
+            }, 150);
+        };
     </script>
 </body>
+
 </html>

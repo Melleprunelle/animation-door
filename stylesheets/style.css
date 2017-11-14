@@ -19,7 +19,8 @@ body {
       background-size: 30%;
       background-position: top;
       perspective: 150px;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-bottom: 50px; }
       body section article div:first-child {
         z-index: 2;
         top: -1px;
@@ -48,13 +49,16 @@ body {
         height: 36px;
         background-color: coral;
         z-index: 1; }
-    body section h1 {
+    body section div {
       font-family: "VT323";
+      font-size: 2em;
       color: coral;
       text-shadow: 1px 0.5px 0px black; }
-      body section h1 span {
-        animation-name: cligno;
-        animation: blink 0.9s infinite alternate; }
+      body section div h1 {
+        display: inline; }
+      body section div span {
+        display: inline;
+        animation: blink infinite alternate 0.8s; }
 
 .rotate {
   transform-origin: left;
