@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <title>Book</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 
 </head>
 <body>
     <section>
        <article>
           <div id="rotate">
+              <div class="poigne"></div>
           </div>
           <div></div>
        </article>
+       <h1>Effect Open the Door <span>_</span></h1>
     </section>
     
     <script>
-    /*function rotate() {
-        document.getElementById("rotate").className="rotate";
-    }*/
+  
     var blockNode = document.querySelector('#rotate');
-        blockNode.addEventListener('mouseover', function(){
+        blockNode.addEventListener('click', function(){
             console.log("clicked");
             this.classList.add("rotate");
         })
-        blockNode.addEventListener('mouseout', function(){
-            console.log("clicked");
-            this.classList.add("rotate2");
+        blockNode.addEventListener('dblclick', function(){
+            console.log("dblclicked");
+            this.classList.remove("rotate");
         })
     </script>
 </body>
